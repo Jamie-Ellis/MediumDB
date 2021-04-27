@@ -41,7 +41,7 @@ articlesRouter.post("/", async (req, res, next) => {
   }
 });
 
-usersRouter.put("/:id", async (req, res, next) => {
+articlesRouter.put("/:id", async (req, res, next) => {
   try {
     const article = await ArticleModel.findByIdAndUpdate(req.params.id, req.body, {
       runValidators: true,
